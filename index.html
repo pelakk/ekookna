@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="PL-pl">
+<head>
+<meta charset="utf-8">
+<title>zadanie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/e7383f6d20.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    
+<link rel="stylesheet" href="style.css">
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+<script type="text/javascript" src="script.js"></script>
+
+    
+</head>
+<body>
+    <div class="col-xs-12 col-md-6 col">
+
+        <div class="row get-user">
+            <div class="container">
+                <h2>Wyszukaj użytkownika</h2>
+
+                <p><i class="fa fa-user"></i><input type="text" value="" placeholder="Szukaj po nazwisku" onfocus="this.placeholder=''" onblur="this.placeholder='Szukaj po nazwisku'" class="input-text surname-find" name="nazwisko"></p>
+                <h6>Podaj jego wiek</h6>
+                <p><i class="fa fa-sort-numeric-up-alt"></i><input type="number" value="" class="input-number age-find" name="wiek"></p>
+                <button type="submit" class="submit"><i class="fas fa-search"></i>Szukaj</button>
+                
+                <div class="overflow-auto"></div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-xs-12 col-md-6 col">
+        <div class="row add-user">
+            <div class="container">
+                <h2>Modyfikuj użytkownika</h2>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a>
+                                Dodaj uzytkownika
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <div class="collapse-item"><p>Imię</p> <input type="text" class="input-text imie-add" maxlength="100"></div>
+                                <div class="collapse-item"><p>Nazwisko</p> <input type="text" class="input-text nazwisko-add" maxlength="100"></div>
+                                <div class="collapse-item"><p>kod pocztowy</p> <input type="text" class="input-text kod-add" maxlength="100"></div>
+                                <div class="collapse-item"><p>Ulica</p> <input type="text" class="input-text ulica-add" maxlength="100"></div>
+                                <div class="collapse-item"><p>Miejscowość</p> <input type="text" class="input-text miejscowosc-add" maxlength="100"></div>
+                                <div class="collapse-item"><p>wiek</p> <input type="number" class="input-text wiek-add"></div>
+                                <div class="collapse-item"><button type="submit" class="submit-add">Dodaj</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a >
+                                Modyfikuj istniejącego
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <div class="collapse-item"><p>Imię</p> <input type="text" class="input-text imie-mod"></div>
+                                <div class="collapse-item"><p>Nazwisko</p> <input type="text" class="input-text nazwisko-mod"></div>
+                                <div class="collapse-item"><p>kod pocztowy</p> <input type="text" class="input-text kod-mod"></div>
+                                <div class="collapse-item"><p>Ulica</p> <input type="text" class="input-text ulica-mod"></div>
+                                <div class="collapse-item"><p>Miejscowość</p> <input type="text" class="input-text miejscowosc-mod"></div>
+                                <div class="collapse-item"><p>Wiek</p> <input type="number" class="input-text wiek-mod"></div>
+                                <div class="collapse-item"><p>Id użytkownika</p> <input type="number" class="input-text id-mod"></div>
+                                <div class="collapse-item"><button type="submit" class="submit-mod">Zmień</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a >
+                                Usuń użytkownika
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <div class="collapse-item"><p>Id użytkownika</p> <input type="number" class="input-text id-del"></div>
+                                <div class="collapse-item"><button type="submit" class="submit-del">Usuń</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
